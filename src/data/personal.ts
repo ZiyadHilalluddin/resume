@@ -12,9 +12,9 @@ export interface PersonalInfo {
 const personal: PersonalInfo = {
   name: "Muhammad Ziyad Bin Hilalluddin",
   title: "Full Stack Developer",
-  email: "ziyad@example.com",
-  phone: "+60 12-345 6789",
-  location: "Selangor, Malaysia",
+  email: "ziyadhilalluddin@example.com",
+  phone: "+60 11-1880 0756",
+  location: "Kuala Lumpur, Malaysia",
   summary: "Passionate developer with experience in React, Node.js, and PostgreSQL.",
   linkedin: "https://www.linkedin.com/in/muhammad-ziyad-hilalluddin-7602321b8/",
   github: "https://github.com/ziyad",

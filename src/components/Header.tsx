@@ -2,6 +2,9 @@
 
 import personal from "@/data/personal";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import profilePic from "@/app/profile.jpg";
+import Image from "next/image";
+
 
 export default function Header() {
   return (
@@ -14,10 +17,12 @@ export default function Header() {
           <h1 className="text-3xl font-semibold text-center text-[#e0e0e0]">{personal.name}</h1>
 
           {/* Profile Picture */}
-          <img
-            src="/profile.jpg"
-            alt="Ziyad Bin Ahmad"
-            className="w-45 h-60 rounded-full object-cover border-4 border-[#00332a] shadow-lg hover:scale-105 transition duration-300"
+          <Image
+            src={profilePic}
+            alt="Picture"
+            width={180}
+            height={240}
+            className="rounded-full object-cover border-4 border-[#00332a] shadow-lg hover:scale-105 transition duration-300"
           />
 
           {/* Title + Location */}
@@ -40,14 +45,14 @@ export default function Header() {
             >
               <FaLinkedin />
             </a>
-            <a
+            {/* <a
               href={personal.github}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#006a52] hover:scale-110 transition"
             >
               <FaGithub />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

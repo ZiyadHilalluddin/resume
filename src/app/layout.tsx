@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Next App",  // You might want to change the title to reflect your app's name
-  description: "A modern web app built with Next.js", // Update this too
+  title: "Resume",  // You might want to change the title to reflect your app's name
+  description: "Muhammad Ziyaad", // Update this too
 };
 
 export default function RootLayout({

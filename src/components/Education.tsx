@@ -73,7 +73,7 @@ export default function Education() {
                     : "opacity-0 scale-100 pointer-events-none" // Hide inactive items and prevent interaction
                 }`}
               >
-                <h3 className="text-xl font-semibold text-gray-800">{item.degree}</h3>
+                <h3 className="text-xl font-semibold text-gray-800">{item.degree} ({item.cgpa})</h3>
                 <p className="text-sm text-gray-500 mb-2">
                   {item.year}
                 </p>
