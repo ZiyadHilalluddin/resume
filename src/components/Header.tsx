@@ -4,6 +4,7 @@ import personal from "@/data/personal";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import profilePic from "@/app/profile.jpg";
 import Image from "next/image";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 export default function Header() {
