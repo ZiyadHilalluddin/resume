@@ -18,17 +18,20 @@ export default function Experience() {
       },
       { root: null, threshold: 0.5 }
     );
-
-    itemRefs.current.forEach((el) => {
+  
+    const currentRefs = [...itemRefs.current]; 
+  
+    currentRefs.forEach((el) => {
       if (el) observer.observe(el);
     });
-
+  
     return () => {
-      itemRefs.current.forEach((el) => {
+      currentRefs.forEach((el) => {
         if (el) observer.unobserve(el);
       });
     };
   }, []);
+  
 
   return (
     <section className="bg-gray-100 rounded-2xl p-5">

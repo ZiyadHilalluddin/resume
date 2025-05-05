@@ -12,23 +12,25 @@ export default function Education() {
         entries.forEach((entry) => {
           const index = Number(entry.target.getAttribute("data-index"));
           if (entry.isIntersecting) {
-            setActiveIndex(index); // Only set activeIndex when the element is in view
+            setActiveIndex(index);
           }
         });
       },
       {
         root: null,
-        threshold: 0.3, // Change threshold to trigger earlier when an item comes into view
-        rootMargin: "0px 0px -0% 0px", // Adjust rootMargin to extend the detection zone
+        threshold: 0.3,
+        rootMargin: "0px 0px -0% 0px",
       }
     );
-
-    itemRefs.current.forEach((el) => {
+  
+    const currentRefs = [...itemRefs.current]; 
+  
+    currentRefs.forEach((el) => {
       if (el) observer.observe(el);
     });
-
+  
     return () => {
-      itemRefs.current.forEach((el) => {
+      currentRefs.forEach((el) => {
         if (el) observer.unobserve(el);
       });
     };
