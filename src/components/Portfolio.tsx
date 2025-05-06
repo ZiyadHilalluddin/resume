@@ -14,7 +14,6 @@ import "yet-another-react-lightbox/styles.css"; // Import the styles for Lightbo
 export default function Portfolio() {
     // State to control the Lightbox
     const [isOpen, setIsOpen] = useState(false);
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [currentImages, setCurrentImages] = useState<string[]>([]);
 
     // Handle opening the lightbox with the clicked image
@@ -22,7 +21,6 @@ export default function Portfolio() {
         const imageUrls = images.map((img) =>
             typeof img === "string" ? img : img.src
         );
-        setCurrentImageIndex(index);
         setCurrentImages(imageUrls);
         setIsOpen(true);
     };
