@@ -1,8 +1,8 @@
 "use client";
 
 import personal from "@/data/personal";
-import { FaLinkedin } from "react-icons/fa";
-import profilePic from "@/app/profile.jpg";
+import { FaLinkedin, FaDownload } from "react-icons/fa";
+import profilePic from "@/app/assets/profile.jpg";
 import Image from "next/image";
 
 export default function Header() {
@@ -28,6 +28,11 @@ export default function Header() {
           <p className="text-sm text-center font-medium text-[#e0e0e0]">{personal.title}</p>
           <p className="text-xs text-center text-[#a3d9b5]">{personal.location}</p>
 
+          {/* Summary */}
+          <p className="text-xs text-center italic text-[#d2f2dd] px-4">
+            {personal.summary}
+          </p>
+
           {/* Contact Info */}
           <div className="mt-3 text-center text-sm space-y-1 text-[#e0e0e0]">
             <p>{personal.email}</p>
@@ -43,6 +48,15 @@ export default function Header() {
               className="hover:text-[#006a52] hover:scale-110 transition"
             >
               <FaLinkedin />
+            </a>
+            {/* Resume Download */}
+            <a
+              href="/assets/Resume.pdf"
+              download="Ziyad_Resume.pdf"
+              title="Download Resume"
+              className="hover:text-[#006a52] hover:scale-110 transition"
+            >
+              <FaDownload />
             </a>
             {/* <a
               href={personal.github}

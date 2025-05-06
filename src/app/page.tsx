@@ -5,14 +5,15 @@ import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
 import Section from "@/components/Section";
+import Portfolio from "@/components/Portfolio";
 
 const Home = () => {
   return (
     <div className="md:grid md:grid-cols-12 md:h-screen h-auto m-0 p-0">
-  {/* Left: Header, full height only on md+, no padding */}
-  <aside className="md:col-span-3 md:sticky md:top-0 h-full m-0 p-0">
-    <Header />
-  </aside>
+      {/* Left: Header, full height only on md+, no padding */}
+      <aside className="md:col-span-3 md:sticky md:top-0 h-full m-0 p-0">
+        <Header />
+      </aside>
 
       {/* Right: Content area with scroll if needed */}
       <main className="md:col-span-9">
@@ -22,6 +23,10 @@ const Home = () => {
 
         <Section id="education">
           <Education />
+        </Section>
+
+        <Section id="portfolio">
+          <Portfolio />
         </Section>
 
         <Section id="skills">

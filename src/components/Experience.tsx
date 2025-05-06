@@ -36,8 +36,6 @@ export default function Experience() {
   return (
     <section className="bg-gray-100 rounded-2xl p-5">
 
-
-
       {/* Section Title */}
       <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">EXPERIENCE</h2>
 
@@ -52,7 +50,7 @@ export default function Experience() {
           {experience.map((_, index) => (
             <div
               key={index}
-              className="relative z-10 w-8 h-8 rounded-full my-6 border-4 border-white shadow-md"
+              className="relative z-10 w-8 h-8 rounded-full my-6 border-4 border-white shadow-md transition-colors duration-300"
               style={{
                 backgroundColor:
                   activeIndex === index ? "#315843" : "#d1d5db", 

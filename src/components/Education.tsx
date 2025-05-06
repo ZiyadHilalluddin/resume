@@ -37,7 +37,7 @@ export default function Education() {
   }, []);
 
   return (
-    <section className="p-8">
+    <section className="p-5">
       {/* Section Title */}
       <h2 className="text-4xl font-bold text-center mb-6 text-gray-800">EDUCATION</h2>
 
@@ -66,26 +66,23 @@ export default function Education() {
           <div className="space-y-8 py-8">  
             {education.map((item, index) => (
               <div
-                key={index}
-                data-index={index}
-                ref={(el) => { if (el) itemRefs.current[index] = el }}
-                className={`bg-[#edece2] p-6 rounded-lg shadow-md transition-all duration-300 min-h-[200px] md:snap-center ${
-                  activeIndex === index
-                    ? "opacity-100 scale-[1.02] border-l-4 border-[#315843]" // Active state
-                    : "opacity-0 scale-100 pointer-events-none" // Hide inactive items and prevent interaction
-                }`}
-              >
-                <h3 className="text-xl font-semibold text-gray-800">{item.degree} ({item.cgpa})</h3>
-                <p className="text-sm text-gray-500 mb-2">
-                  {item.year}
-                </p>
-                <p className="text-[#4a9b8d] font-medium mb-2">{item.institution}</p>
-                <ul className="list-disc ml-5 text-sm text-gray-700 space-y-6">
-                  {item.focus && (
-                    <li>{item.focus}</li>
-                  )}
-                </ul>
-              </div>
+              key={index}
+              data-index={index}
+              ref={(el) => { if (el) itemRefs.current[index] = el }}
+              className={`bg-[#edece2] p-6 rounded-lg shadow-md transition-all duration-300 min-h-[200px] md:snap-center ${
+                activeIndex === index
+                  ? "opacity-100 scale-[1.02] border-l-4 border-[#315843]" // Active state
+                  : "opacity-0 scale-100 pointer-events-none" // Hide inactive items and prevent interaction
+              }`}
+            >
+              <h3 className="text-xl font-semibold text-gray-800">{item.degree}</h3>
+              <p className="text-sm text-gray-500 mb-2">{item.year}</p>
+              <p className="text-[#4a9b8d] font-medium mb-2">{item.institution}</p>
+              <p className="text-sm text-gray-700">
+                <span className="font-medium text-gray-800">CGPA:</span> {item.cgpa}
+              </p>
+            </div>
+            
             ))}
           </div>
         </div>
