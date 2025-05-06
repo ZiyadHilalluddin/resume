@@ -23,8 +23,8 @@ const experience: ExperienceItem[] = [
   {
     company: "Micro Technology Solution Sdn Bhd",
     role: "IT Engineering Internship",
-    start: "Sept 2023",
-    end: "Dec 2022",
+    start: "September 2023",
+    end: "December 2023",
     description: [
       "Enhanced security by installing and configuring antivirus software, safeguarding company data.",
       "Provided IT solutions and vendor support for ChinHin Group Berhad.",
@@ -34,8 +34,8 @@ const experience: ExperienceItem[] = [
   {
     company: "Software Developer Internship",
     role: "TM Research & Development",
-    start: "Jul 2020",
-    end: "Oct 2020",
+    start: "July 2020",
+    end: "October 2020",
     description: [
       "Developed a frontend application system using Angular and JavaScript, delivering responsive and user-friendly interfaces.",
       "Participated in weekly SCRUM meetings to track project progress, collaborate with team members, and ensure timely delivery of tasks.",
