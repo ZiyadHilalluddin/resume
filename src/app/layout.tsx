@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Resume",  // You might want to change the title to reflect your app's name
-  description: "Muhammad Ziyaad", // Update this too
+  description: "Muhammad Ziyad",
 };
 
 export default function RootLayout({
